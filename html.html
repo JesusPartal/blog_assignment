@@ -29,6 +29,7 @@
             top: 0px;
             background-color: white;
             width: 100%;
+            /* Adding z-index: ul.date is being placed on top after using transform. Source: https://stackoverflow.com/questions/20851452/z-index-is-canceled-by-setting-transformrotate */
             z-index: 1;
             box-shadow: 0px 4px 4px #888888
         }
@@ -78,13 +79,17 @@
         
         header {
             margin-top: 3em;
+            line-height: 3em;
             font-size: 3em;
             color: red;
-            padding: 0px 0px 160px 0px;
+            padding: 0px 0px 0px 0px;
             font-family: 'Comfortaa', sans-serif;
+            padding-left: 20px;
+            padding-right: 20px;
         }
         
         h2 {
+            margin-top: 140px;
             font-size: 2em;
             color: red;
             font-family: 'Comfortaa', sans-serif;
@@ -152,6 +157,30 @@
             padding-bottom: 20px;
             margin-top: 20px;
             margin-bottom: 20px;
+        }
+        
+        p {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        div.picture img {
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            max-width: 50%;
+            max-height: 50%;
+        }
+        
+        ul.social {
+            list-style: none;
+            float: right;
+            padding: 0xp;
+        }
+        
+        ul.social li {
+            padding: 0px;
         }
     </style>
 
