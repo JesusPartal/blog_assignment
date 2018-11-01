@@ -91,8 +91,10 @@
         h2 {
             margin-top: 140px;
             font-size: 2em;
+            line-height: 3em;
             color: red;
             font-family: 'Comfortaa', sans-serif;
+            text-transform: uppercase;
         }
         
         h2::first-letter {
@@ -106,11 +108,16 @@
             background-color: black;
             border-radius: 50%;
             text-align: center;
-            width: 5em;
-            height: 5em;
+            /*
+            this needs fix
+            */
+            width: 6em;
+            height: 6em;
             padding: 0px;
-            text-align: center;
             transform: rotate(30deg);
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 2em;
         }
         
         article:nth-child(even) ul.date {
@@ -132,14 +139,17 @@
         
         li.day {
             font-size: 200%;
+            vertical-align: bottom;
         }
         
         li.month {
-            font-size: 150%;
+            font-size: 133%;
+            vertical-align: middle;
         }
         
         li.year {
             font-size: 100%;
+            vertical-align: top;
         }
         
         article {
@@ -165,22 +175,64 @@
             text-align: justify;
         }
         
+        p~ol {
+            padding-left: 40px;
+        }
+        
         div.picture img {
+            margin-bottom: 20px;
+            max-width: 33%;
+            max-height: 33%;
+            border-radius: 15px;
+            border: 2px solid gray;
+        }
+        
+        article:nth-child(odd) div.picture img {
+            float: right;
+            margin-left: 20px;
+        }
+        
+        article:nth-child(even) div.picture img {
             float: left;
             margin-right: 20px;
-            margin-bottom: 20px;
-            max-width: 50%;
-            max-height: 50%;
         }
         
         ul.social {
             list-style: none;
+            display: flex;
             float: right;
-            padding: 0xp;
         }
         
         ul.social li {
-            padding: 0px;
+            padding: 1px;
+        }
+        
+        footer {
+            /* https://www.w3schools.com/css/css_float.asp */
+            clear: right;
+        }
+        
+        span.taglabel {
+            color: red;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        
+        span.tag {
+            color: black;
+            margin-right: 20px;
+        }
+        
+        footer.main {
+            margin-top: 50px;
+        }
+        
+        footer.main div:nth-child(1) {
+            float: left;
+        }
+        
+        footer.main div:nth-child(2) {
+            float: right;
         }
     </style>
 
